@@ -1,0 +1,296 @@
+/* Greens, Browns, and Whites */
+/* Frontpage code */
+html {
+    height: 100%;
+    width: auto;
+    background: url('Pictures/Shizuoka\ Field.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-y: -1px;
+    margin-top: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* padding-left: 10%;
+    padding-right: 10%; */
+}
+
+@media screen and (max-width: 480px)  
+{    
+     p.desktop {
+         display:none;
+     }
+}
+
+    p.mobile {
+        display:none;
+    }
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+hr {
+    height: 1.5px;
+    margin: 20px 0;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), color-stop(0.5, #333333), to(rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+    background: linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+    border: 0;
+  }
+  hr:after {
+    display: block;
+    content: '';
+    height: 30px;
+    background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #cccccc), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -o-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: radial-gradient(farthest-side at center top, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+#frontpage {
+    text-align: center;
+    width: auto;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.topBanner {
+    position: relative;
+}
+
+.topBanner::after {
+    content: "";
+    background-image: url(Pictures/Rice\ Paper.jpg);
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.topBanner h1 {
+    text-align: center;
+}
+
+
+#frontpageText {
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+}
+
+#frontpageText::after {
+    content: "";
+    background-image: url(Pictures/Rice\ Paper.jpg);
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#frontpageText p {
+    opacity: 1;
+}
+
+
+ h1 {
+    color: black;
+    font-style: oblique;
+}
+
+#frontpage ul li{
+    display: inline-block;
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
+    opacity: 1;
+    
+        /* text-decoration: none; */
+}
+
+.picLinks {
+    position: relative;
+    text-align: center;
+    opacity: 1 !important;
+}
+
+.scroll {
+    height: 180px;
+    width: 180px;
+    position: relative;
+    opacity: 1;
+}
+
+.pictures {
+    max-height: 180px;
+    max-width: 180px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.pictures:hover {
+    box-shadow: 1px 1px 30px 5px darkolivegreen;
+    opacity: 0.8;
+}
+
+.pictures .centered:hover {
+    box-shadow: 1px 1px 30px 5px darkolivegreen;
+    opacity: 0.8;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#frontpage p{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 20px;
+}
+
+#frontpage .picLinks {
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: oblique;
+}
+
+/* Below is css for content pages */
+
+
+.content {
+    text-align: center;
+    position: relative;
+    width: auto;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.contentBanner {
+    width: calc(100% - (18em + 6em));
+    height: 3em;
+    margin-left: 18em;
+    margin-right: 6em;
+    float: center;
+    text-align: center;
+    position: relative;
+}
+
+.contentBanner::after {
+    content: "";
+    background-image: url(Pictures/Rice\ Paper.jpg);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.leftContent {
+    width: 10em;
+    float: left;
+    margin-left: 6em;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+
+.leftContent::after {
+    content: "";
+    background-image: url(Pictures/Rice\ Paper.jpg);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.leftContent ul, li {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 5px;
+    margin-left: 0;
+}
+
+.logo {
+    height: 80px;
+    width: 70px;
+    padding-top: 10px;
+}
+
+.contentBody {
+    width: auto;
+    margin-left: 18em;
+    margin-right: 6em;
+    float: right;
+    position: relative;
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.contentBody::after {
+    content: "";
+    background-image: url(Pictures/Rice\ Paper.jpg);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.contentBody p {
+    text-indent: 20px;
+}
+
+.contentBody img {
+    width: auto;
+    height: 200px;
+    padding-bottom: 20px;
+}
+
+.footer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
