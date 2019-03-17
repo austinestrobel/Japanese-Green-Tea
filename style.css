@@ -120,7 +120,7 @@ hr {
 
  h1 {
     color: black;
-    font-style: oblique;
+    /* font-style: oblique; */
 }
 
 #frontpage ul li{
