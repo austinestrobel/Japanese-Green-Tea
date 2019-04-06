@@ -1,4 +1,3 @@
-/* Greens, Browns, and Whites */
 /* Frontpage code */
 html {
     height: 100%;
@@ -11,20 +10,11 @@ html {
     background-position-y: -1px;
     margin-top: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* padding-left: 10%;
-    padding-right: 10%; */
 }
 
-@media screen and (max-width: 480px)  
-{    
-     p.desktop {
-         display:none;
-     }
+.mobile {
+    display: none;
 }
-
-    p.mobile {
-        display:none;
-    }
 
 a {
     text-decoration: none;
@@ -38,10 +28,6 @@ a:visited {
     color: black;
 }
 
-a:hover {
-    color: black;
-    font-weight: bold;
-}
 
 hr {
     height: 1.5px;
@@ -94,6 +80,23 @@ hr {
     text-align: center;
 }
 
+.topBanner .logo {
+    height: 48px;
+    width: 40px;
+    display: inline-block;
+    
+}
+
+.topBanner .logo2 {
+    height: 48px;
+    width: 40px;
+    display: inline-block;
+    transform: scale(-1, 1);
+    -webkit-transform:scale(-1,1);
+    -moz-transform:scale(-1,1);
+    -o-transform:scale(-1,1);
+}
+
 
 #frontpageText {
     overflow-y: auto;
@@ -123,13 +126,18 @@ hr {
     /* font-style: oblique; */
 }
 
-#frontpage ul li{
-    display: inline-block;
-    padding-inline-end: 10px;
-    padding-inline-start: 10px;
-    opacity: 1;
-    
-        /* text-decoration: none; */
+#frontpage ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0px;
+    padding-bottom: 10px;
+}
+
+.homeUL {
+    padding-right: 5px;
 }
 
 .picLinks {
@@ -143,23 +151,17 @@ hr {
     width: 180px;
     position: relative;
     opacity: 1;
+    margin: 0.8rem;
 }
 
 .pictures {
-    max-height: 180px;
-    max-width: 180px;
     position: relative;
     height: 100%;
     width: 100%;
     opacity: 1;
 }
 
-.pictures:hover {
-    box-shadow: 1px 1px 30px 5px darkolivegreen;
-    opacity: 0.8;
-}
-
-.pictures .centered:hover {
+.scroll:hover {
     box-shadow: 1px 1px 30px 5px darkolivegreen;
     opacity: 0.8;
 }
@@ -187,33 +189,25 @@ hr {
 
 /* Below is css for content pages */
 
-
 .content {
-    text-align: center;
-    position: relative;
-    width: auto;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
+    padding-left: 7%;
+    padding-right: 7%;
+    display: grid;
+    grid-template-columns: 13em, auto;
+    grid-gap: 10px;
+    grid-auto-rows: auto;
 }
 
-/* .contentPictures {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin-left: 1em;
-    margin-left: 1em;
-} */
 
-.contentBanner {
-    width: calc(100% - (18em + 6em));
-    height: 3em, auto;
-    margin-left: 18em;
-    margin-right: 6em;
-    float: center;
+.contentBanner {    
     text-align: center;
     position: relative;
+    grid-row: 1;
+    grid-column: 2;
+    max-height: 4.5em;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -20px;
 }
 
 .contentBanner::after {
@@ -229,12 +223,12 @@ hr {
 }
 
 .leftContent {
-    width: 10em;
-    float: left;
-    margin-left: 6em;
-    position: absolute;
+    position: relative;
+    max-height: 25em;
+    grid-column: 1;
+    grid-row: 1 / 3;
     text-align: center;
-    top: 0;
+    min-width: 10em;
 }
 
 .leftContent::after {
@@ -249,29 +243,27 @@ hr {
     z-index: -1;
 }
 
-.leftContent ul, li {
+.leftContent ul {
     list-style-type: none;
     text-align: left;
-    padding-left: 5px;
-    margin-left: 0;
+    margin-left: -15px;
 }
 
 .logo {
-    height: 80px;
-    width: 70px;
+    height: 72px;
+    width: 62px;
     padding-top: 10px;
 }
 
 .contentBody {
     width: auto;
-    margin-left: 18em;
-    margin-right: 6em;
-    float: right;
     position: relative;
-    margin-top: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin-top: -20px;
+    padding-right: 15px;
+    padding-left: 15px;
     text-align: center;
+    grid-row: 2;
+    grid-column: 2;
 }
 
 .contentBody::after {
@@ -294,11 +286,64 @@ hr {
     width: auto;
     height: auto;
     padding-bottom: 20px;
-    max-width: 80%;
+    max-width: 75%;
+    min-width: 50%;
+    max-height: 20em;
 }
 
 .footer {
     float: right;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .topBanner .logo2 {
+        display: none;
+    }
+
+    .content .logo {
+        height: 40px;
+        width: 32px;
+    }
+    
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .leftContent {
+        order: 1
+    }
+
+    .leftContent ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: -35px;
+    }
+
+    .contentBanner {
+        order: 2;
+        justify-content: center;
+        margin-top: 5px;
+        max-height: 3.5em;
+    }
+
+    .contentBody {
+        order: 3;
+        margin-top: 5px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: contents;
+    }
+
+
 }
