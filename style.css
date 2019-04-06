@@ -1,6 +1,6 @@
 /* Frontpage code */
 html {
-    height: 100%;
+    height: 100vh;
     width: auto;
     background: url('Pictures/Shizuoka\ Field.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
