@@ -291,11 +291,11 @@ hr {
     max-height: 20em;
 }
 
-.footer {
+/* .footer {
     float: right;
     margin-top: 1em;
     margin-bottom: 1em;
-}
+} */
 
 @media only screen and (max-width: 600px) {
     .topBanner .logo2 {
